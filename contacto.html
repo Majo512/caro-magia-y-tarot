@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Mi Sitio</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+   <img src= "marq1-removebg.png" alt="Tarot de Carol" class="logo-titulo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+         <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <h2>Contáctame</h2>
+  
+  <div class="contacto-contenedor">
+    
+    <!-- Columna Izquierda: Formulario -->
+    <div class="contacto-formulario">
+      <p class="texto-intro">¿Tienes alguna pregunta o consulta? Escríbeme y te responderé pronto.</p>
+      
+      <!-- IMPORTANTE: El id="formulario-contacto" es vital para que el script funcione -->
+      <form id="formulario-contacto">
+        <div class="campo-grupo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        
+        <div class="campo-grupo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+        </div>
+        
+        <div class="campo-grupo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        
+        <!-- El botón dentro del form -->
+        <button type="submit">Enviar mensaje por WhatsApp</button>
+      </form>
+    </div>
+
+    <!-- Columna Derecha: Imagen -->
+    <div class="contacto-imagen">
+      <img src="carol.jpeg" alt="Tarot">
+    </div>
+
+  </div>
+</main>
+  <footer>
+    &copy; 2026 Caro Magia y Tarot — Todos los derechos reservados
+  </footer>
+ <script>
+  // Buscamos el formulario por su ID
+  const formulario = document.getElementById('formulario-contacto');
+  
+  if (formulario) {
+    formulario.addEventListener('submit', function(evento) {
+      evento.preventDefault(); // Evita que la página se recargue
+
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      // ¡CAMBIA ESTE NÚMERO POR EL TUYO! (Código de país + número, sin el signo +)
+      const miNumero = '5491161562058'; 
+
+      const texto = `Hola, soy ${nombre}. Mi correo es ${email}. Mensaje: ${mensaje}`;
+      const textoCodificado = encodeURIComponent(texto);
+      const urlWhatsApp = `https://wa.me/${miNumero}?text=${textoCodificado}`;
+      
+      window.open(urlWhatsApp, '_blank');
+    });
+  }
+</script>
+</body>
+</html>

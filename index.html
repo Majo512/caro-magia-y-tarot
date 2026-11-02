@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caro Sacerdotisa Wicca</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+     <!-- Asegúrate de que la imagen exista en la carpeta -->
+     <img src="marq1-removebg.png" alt="Caro Sacerdotisa Wicca" class="logo-titulo">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Bienvenida, Bienvenido. Entra y experimenta la magia.</h2>
+
+    <!-- CARRUSEL -->
+    <section class="carrusel">
+      <div class="carrusel-contenedor">
+
+        <div class="carrusel-slide activo">
+          <!-- CORREGIDO: comillas en el src -->
+          <img src="elemental.jpg" alt="Conexión con los elementos">
+          <div class="carrusel-texto">
+            <h3>Conexión con los elementos</h3>
+            <p>Vino de mandrágora, plantas que consuelan. Donde cruje la hiedra los elementos se invocan.</p>
+          </div>
+        </div>
+
+        <div class="carrusel-slide">
+          <!-- CORREGIDO: comillas en el src -->
+          <img src="a.png" alt="Hechizos y Rituales">
+          <div class="carrusel-texto">
+            <h3>Hechizos y Rituales</h3>
+            <p>Noches en las que tú, la luna y el agua son todo uno.</p>
+          </div>
+        </div>
+
+        <div class="carrusel-slide">
+          <!-- CORREGIDO: comillas en el src -->
+          <img src="tarot1.jpg" alt="Revelación de lo oculto">
+          <div class="carrusel-texto">
+            <h3>Revelación de lo oculto</h3>
+            <p>Con magia en el aire y velas encendidas lo secreto se revela ante almas elegidas.</p>
+          </div>
+        </div>
+
+        <div class="carrusel-slide">
+          <!-- Este ya estaba bien -->
+          <img src="exito.png" alt="Rituales de éxito">
+          <div class="carrusel-texto">
+            <h3>Rituales de éxito</h3>
+            <p>Las sombras danzantes dibujan el rito abriendo las puertas de lo infinito. El velo se rompe, el pacto se sella bajo el reflejo de la última estrella.</p>
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <button class="carrusel-btn prev" aria-label="Anterior">&#10094;</button>
+        <button class="carrusel-btn next" aria-label="Siguiente">&#10095;</button>
+
+        <!-- Indicadores -->
+        <div class="carrusel-indicadores">
+          <span class="punto activo" data-slide="0"></span>
+          <span class="punto" data-slide="1"></span>
+          <span class="punto" data-slide="2"></span>
+          <span class="punto" data-slide="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <p>
+      Navega por las secciones usando el menú superior para descubrir más
+      sobre este proyecto.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2026 Caro Magia y Tarot — Todos los derechos reservados
+  </footer>
+
+  <script src="carrusel.js"></script>
+</body>
+</html>
